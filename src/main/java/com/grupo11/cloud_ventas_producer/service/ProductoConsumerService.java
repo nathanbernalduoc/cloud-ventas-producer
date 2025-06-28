@@ -14,7 +14,6 @@ public class ProductoConsumerService {
 
     @RabbitListener(queues = RabbitMQConfig.QUEUE_NAME)
     public void receiveMessage(Producto producto) {
-        //System.out.println("Mensaje recibido: " + producto.toString());
         productoService.createProducto(producto);
         System.out.println("Mensaje guardado: " + producto.toString() );
     }
