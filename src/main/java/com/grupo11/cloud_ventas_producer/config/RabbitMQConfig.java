@@ -12,12 +12,6 @@ public class RabbitMQConfig {
     public static final String QUEUE_NAME = "sales_mq";
 
     @Bean
-    public Queue queue() {
-        return QueueBuilder.durable(QUEUE_NAME)
-                .build();
-    }
-
-    @Bean
     public Jackson2JsonMessageConverter producerJackson2MessageConverter() {
         return new Jackson2JsonMessageConverter();
     }

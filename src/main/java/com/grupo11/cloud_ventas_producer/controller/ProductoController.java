@@ -38,10 +38,10 @@ public class ProductoController {
     }
 
     @PostMapping("/producto")
-    public String sendMessage(@RequestBody Producto producto) {
+    public Producto sendMessage(@RequestBody Producto producto) {
         System.out.println("Sending message: " + producto.toString());
         productoService.sendProductoToQueue(producto);
-        return "Message sent: " + producto.toString();
+        return producto;
     }
 
 }
