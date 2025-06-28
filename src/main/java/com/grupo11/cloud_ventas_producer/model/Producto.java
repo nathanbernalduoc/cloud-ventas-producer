@@ -1,4 +1,4 @@
-package com.gurpo11.cloud_ventas_producer.model;
+package com.grupo11.cloud_ventas_producer.model;
 
 import java.sql.Date;
 

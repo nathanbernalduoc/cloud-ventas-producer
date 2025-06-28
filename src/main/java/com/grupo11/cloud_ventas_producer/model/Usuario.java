@@ -1,4 +1,4 @@
-package com.gurpo11.cloud_ventas_producer.model;
+package com.grupo11.cloud_ventas_producer.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

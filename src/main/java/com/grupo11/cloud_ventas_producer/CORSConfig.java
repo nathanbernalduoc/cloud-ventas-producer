@@ -1,4 +1,4 @@
-package com.gurpo11.cloud_ventas_producer;
+package com.grupo11.cloud_ventas_producer;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Bean;

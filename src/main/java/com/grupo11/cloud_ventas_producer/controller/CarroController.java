@@ -1,12 +1,12 @@
-package com.gurpo11.cloud_ventas_producer.controller;
+package com.grupo11.cloud_ventas_producer.controller;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.gurpo11.cloud_ventas_producer.model.Carro;
-import com.gurpo11.cloud_ventas_producer.service.CarroService;
+import com.grupo11.cloud_ventas_producer.model.Carro;
+import com.grupo11.cloud_ventas_producer.service.CarroService;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
