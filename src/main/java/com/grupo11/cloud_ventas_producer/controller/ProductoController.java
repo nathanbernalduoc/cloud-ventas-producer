@@ -32,13 +32,15 @@ public class ProductoController {
         return productoService.getProductoById(id);
     }
 
-    /*public void MessageController(ProductoProducer messageProducer) {
-        this.productoProducer = messageProducer;
-    }*/
+/*
+    @PostMapping("/producto")
+    public Carro setProducto(@RequestBody Producto producto) {
+        return productoService.createProducto(producto);
+    }
+*/
 
     @PostMapping("/producto")
-    public Producto sendMessage(@RequestBody Producto producto) {
-        System.out.println("Sending Product: " + producto.toString());
+    public Producto sendMessageCarro(@RequestBody Producto producto) {
         productoService.sendProductoToQueue(producto);
         return producto;
     }

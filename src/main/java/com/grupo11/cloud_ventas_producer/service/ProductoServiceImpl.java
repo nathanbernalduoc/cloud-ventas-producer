@@ -51,7 +51,7 @@ public class ProductoServiceImpl implements ProductoService {
 
     @Override
     public void sendProductoToQueue(Producto producto) {
-        rabbitTemplate.convertAndSend(RabbitMQConfig.QUEUE_NAME, producto);
+        rabbitTemplate.convertAndSend(RabbitMQConfig.QUEUE_PRODUCTS, producto);
     }
 
 }

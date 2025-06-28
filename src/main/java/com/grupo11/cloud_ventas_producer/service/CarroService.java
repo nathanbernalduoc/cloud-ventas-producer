@@ -14,5 +14,6 @@ public interface CarroService {
     void deleteCarro(Long id);
 
     public List<Carro> getCarroByUsuarioId(String usuarioId);
+    public void sendCarroToQueue(Carro carro);
 
 }

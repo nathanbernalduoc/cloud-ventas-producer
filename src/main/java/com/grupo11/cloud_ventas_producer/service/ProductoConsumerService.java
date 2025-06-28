@@ -12,7 +12,7 @@ public class ProductoConsumerService {
     @Autowired
     private ProductoService productoService;
 
-    @RabbitListener(queues = RabbitMQConfig.QUEUE_NAME)
+    @RabbitListener(queues = RabbitMQConfig.QUEUE_PRODUCTS)
     public void receiveMessage(Producto producto) {
         productoService.createProducto(producto);
         System.out.println("Mensaje guardado: " + producto.toString() );

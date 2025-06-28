@@ -7,7 +7,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitMQConfig {
 
-    public static final String QUEUE_NAME = "sales_mq";
+    public static final String QUEUE_PRODUCTS = "products_mq";
+    public static final String QUEUE_SALES = "sales_mq";
 
     @Bean
     public Jackson2JsonMessageConverter producerJackson2MessageConverter() {
