@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.grupo11.cloud_ventas_producer.model.Producto;
-import com.grupo11.cloud_ventas_producer.service.MessageProducer;
 import com.grupo11.cloud_ventas_producer.service.ProductoService;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RestController
 public class ProductoController {
 
-    private MessageProducer messageProducer;
+    //private ProductoProducer productoProducer;
 
     @Autowired
     private ProductoService productoService;
@@ -33,13 +32,13 @@ public class ProductoController {
         return productoService.getProductoById(id);
     }
 
-    public void MessageController(MessageProducer messageProducer) {
-        this.messageProducer = messageProducer;
-    }
+    /*public void MessageController(ProductoProducer messageProducer) {
+        this.productoProducer = messageProducer;
+    }*/
 
     @PostMapping("/producto")
     public Producto sendMessage(@RequestBody Producto producto) {
-        System.out.println("Sending message: " + producto.toString());
+        System.out.println("Sending Product: " + producto.toString());
         productoService.sendProductoToQueue(producto);
         return producto;
     }

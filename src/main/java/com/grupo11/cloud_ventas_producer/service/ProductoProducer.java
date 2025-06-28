@@ -6,11 +6,11 @@ import org.springframework.stereotype.Service;
 import com.grupo11.cloud_ventas_producer.config.RabbitMQConfig;
 
 @Service
-public class MessageProducer {
+public class ProductoProducer {
 
     private final RabbitTemplate rabbitTemplate;
 
-    public MessageProducer(RabbitTemplate rabbitTemplate) {
+    public ProductoProducer(RabbitTemplate rabbitTemplate) {
         this.rabbitTemplate = rabbitTemplate;
     }
 
